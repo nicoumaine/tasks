@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import rug from "./assets/photos/authentic_persian_rug.jpg";
-import {Container, Row, Col, Button} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 function App(): React.JSX.Element {
     return (
         <div className="App">
