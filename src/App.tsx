@@ -6,6 +6,11 @@ function App(): React.JSX.Element {
         <div className="App">
             <h1>Goofy Goober</h1>
             <img src={rug} alt='A meme featuring several Persian rugs with the text: "Friend, Girlfriend, Boyfriend, Best friend" (all with "end" underlined). Next to them it says "Only authentic persian rug Has no END," highlighting that unlike friendships or relationships that may end, Persian rugs are timeless.' />
+            <ul>
+            <li>Girlfriend X</li>
+            <li>Boyfriend X</li>
+            <li>Bestfriend X</li>
+        </ul>
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
