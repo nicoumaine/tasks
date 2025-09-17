@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.css";
-import React, { Component } from 'react';
-import logo from 'src/assets/photos/authentic_persian_rug.jpg';
 
 function App(): React.JSX.Element {
     return (
