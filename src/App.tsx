@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import rug from "./assets/photos/authentic_persian_rug.jpg";
+import {Container, Row, Col, Button} from "react-bootstrap";
 function App(): React.JSX.Element {
     return (
         <div className="App">
@@ -10,6 +11,7 @@ function App(): React.JSX.Element {
             <li>Girlfriend X</li>
             <li>Boyfriend X</li>
             <li>Bestfriend X</li>
+            <Button onClick={ () => { console.log("Hello world!") } }>Log Hello World</Button>
         </ul>
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
