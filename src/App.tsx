@@ -8,6 +8,13 @@ function App(): React.JSX.Element {
         <Container>
             <Row>
             <Col>
+                <div
+                    style={{
+                        width: "400px".
+                        height: "5px",
+                        backgroundColor: "red",
+                }}
+                />
             <h1>Goofy Goober</h1>
             <img src={rug} alt='A meme featuring several Persian rugs with the text: "Friend, Girlfriend, Boyfriend, Best friend" (all with "end" underlined). Next to them it says "Only authentic persian rug Has no END," highlighting that unlike friendships or relationships that may end, Persian rugs are timeless.' />
             <ul>
@@ -21,6 +28,13 @@ function App(): React.JSX.Element {
             </header>
             </Col>
             <Col>
+              <div
+                    style={{
+                        width: "400px".
+                        height: "5px",
+                        backgroundColor: "red",
+                }}
+                />  
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
