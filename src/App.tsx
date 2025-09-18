@@ -28,6 +28,13 @@ function App(): React.JSX.Element {
             </header>
             </Col>
             <Col>
+                <div
+                    style={{
+                        width: "400px",
+                        height: "5px",
+                        backgroundColor: "red",
+                }}
+                />
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
