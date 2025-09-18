@@ -11,7 +11,7 @@ function App(): React.JSX.Element {
             <Col>
                 <div
                     style={{
-                        width: "400px".
+                        width: "400px",
                         height: "5px",
                         backgroundColor: "red",
                 }}
