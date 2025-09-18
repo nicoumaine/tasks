@@ -5,7 +5,8 @@ import { Container, Row, Col, Button} from "react-bootstrap";
 function App(): React.JSX.Element {
     return (
         <div className="App">
-        <Container>
+            <h1>Goofy Goober</h1>
+             <Container>
             <Row>
             <Col>
                 <div
@@ -15,7 +16,6 @@ function App(): React.JSX.Element {
                         backgroundColor: "red",
                 }}
                 />
-            <h1>Goofy Goober</h1>
             <img src={rug} alt='A meme featuring several Persian rugs with the text: "Friend, Girlfriend, Boyfriend, Best friend" (all with "end" underlined). Next to them it says "Only authentic persian rug Has no END," highlighting that unlike friendships or relationships that may end, Persian rugs are timeless.' />
             <ul>
             <li>Girlfriend X</li>
