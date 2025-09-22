@@ -49,9 +49,10 @@ export const removeDollars = (amounts: string[]): number[] =>
  * string that ends in "!" should be made uppercase. Also, remove any strings that end
  * in question marks ("?").
  */
-export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
-};
+export const shoutIfExclaiming = (messages: string[]): string[] =>
+    messages
+        .filter((msg) => !msg.endsWith("?"))
+        .map((msg) => (msg.endsWith("!") ? msg.toUpperCase() : msg));
 
 /**
  * Consumes an array of words and returns the number of words that are LESS THAN
