@@ -92,7 +92,10 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    return {
+        ...question, // copy all the existing fields
+        name: newName, // overwrite just the name
+    };
 }
 
 /**
