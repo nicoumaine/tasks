@@ -10,12 +10,16 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 }
 
 /**
- * Consumes an array of questions and returns a new array of only the questions that are
- * considered "non-empty". An empty question has an empty string for its `body` and
- * `expected`, and an empty array for its `options`.
+ * Consumes an array of questions and returns only those that are not "empty".
+ * A question is "non-empty" if its body, expected, or options array is not empty.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions.filter(
+        (q) =>
+            q.body.trim() !== "" ||
+            q.expected.trim() !== "" ||
+            q.options.length > 0,
+    );
 }
 
 /***
