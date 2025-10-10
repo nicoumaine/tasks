@@ -75,19 +75,23 @@ export function publishAll(questions: Question[]): Question[] {
     }));
 }
 
-/***
- * Consumes an array of Questions and produces a new array of the same Questions,
- * except that a blank question has been added onto the end. Reuse the `makeBlankQuestion`
- * you defined in the `objects.ts` file.
- * Hint: as usual, do not modify the input questions array
- */
 export function addNewQuestion(
     questions: Question[],
     id: number,
     name: string,
     type: QuestionType,
 ): Question[] {
-    return [];
+    const blank: Question = {
+        id,
+        name,
+        type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false,
+    };
+    return [...questions, blank];
 }
 
 /***
