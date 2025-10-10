@@ -22,15 +22,15 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
     );
 }
 
-/***
- * Consumes an array of questions and returns the question with the given `id`. If the
- * question is not found, return `null` instead.
+/**
+ * Finds a question by ID. Returns null if not found.
  */
 export function findQuestion(
     questions: Question[],
     id: number,
 ): Question | null {
-    return null;
+    const found = questions.find((q) => q.id === id);
+    return found ?? null;
 }
 
 /**
