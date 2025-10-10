@@ -34,12 +34,10 @@ export function findQuestion(
 }
 
 /**
- * Consumes an array of questions and returns a new array that does not contain the question
- * with the given `id`.
- * Hint: use filter
+ * Removes the question with the given ID from the list.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions.filter((q) => q.id !== id);
 }
 
 /***
@@ -48,7 +46,7 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * Do not modify the input array.
  */
 export function getNames(questions: Question[]): string[] {
-    return [];
+    return questions.map((question) => question.name);
 }
 
 /**
