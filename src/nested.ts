@@ -75,6 +75,12 @@ export function publishAll(questions: Question[]): Question[] {
     }));
 }
 
+/***
+ * Consumes an array of Questions and produces a new array of the same Questions,
+ * except that a blank question has been added onto the end. Reuse the `makeBlankQuestion`
+ * you defined in the `objects.ts` file.
+ * Hint: as usual, do not modify the input questions array
+ */
 export function addNewQuestion(
     questions: Question[],
     id: number,
@@ -106,7 +112,9 @@ export function renameQuestionById(
     targetId: number,
     newName: string,
 ): Question[] {
-    return [];
+    return questions.map((question) =>
+        question.id === targetId ? { ...question, name: newName } : question,
+    );
 }
 
 /**
@@ -127,5 +135,25 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((q) => {
+        if (q.id !== targetId) return q; // keep unchanged
+
+        // Update options array
+        let newOptions: string[];
+        if (targetOptionIndex === -1) {
+            // Append newOption
+            newOptions = [...q.options, newOption];
+        } else {
+            // Replace option at targetOptionIndex
+            newOptions = q.options.map((opt, idx) =>
+                idx === targetOptionIndex ? newOption : opt,
+            );
+        }
+
+        // Return a new question object with updated options
+        return {
+            ...q,
+            options: newOptions,
+        };
+    });
 }
