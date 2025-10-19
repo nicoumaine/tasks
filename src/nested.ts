@@ -28,7 +28,6 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
 export function findQuestion(
     questions: Question[],
     id: number,
-    id: number,
 ): Question | null {
     const found = questions.find((q) => q.id === id);
     return found ?? null;
@@ -87,7 +86,6 @@ export function addNewQuestion(
     id: number,
     name: string,
     type: QuestionType,
-    type: QuestionType,
 ): Question[] {
     const blank: Question = {
         id,
@@ -114,7 +112,6 @@ export function renameQuestionById(
     questions: Question[],
     targetId: number,
     newName: string,
-    newName: string,
 ): Question[] {
     return questions.map((question) =>
         question.id === targetId ? { ...question, name: newName } : question,
@@ -139,7 +136,6 @@ export function editOption(
     targetId: number,
     targetOptionIndex: number,
     newOption: string,
-    newOption: string,
 ): Question[] {
     return questions.map((q) => {
         if (q.id !== targetId) return q; // keep unchanged
@@ -162,7 +158,4 @@ export function editOption(
             options: newOptions,
         };
     });
-}
-
-    return [];
 }
